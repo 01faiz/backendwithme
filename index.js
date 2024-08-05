@@ -2,12 +2,12 @@ require('dotenv').config()
 
 const express = require('express');
 const app = express();
-const carts = require('data.js');
+
 
 const port = process.env.PORT
 
 app.get('/', (req,res) => {
-    res.send(carts)
+    res.send("Hello")
 })
 
 app.get('/follow', (req,res) => {
