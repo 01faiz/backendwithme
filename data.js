@@ -271,4 +271,3 @@ const carts = [
     }
   ]
 
-  export {carts}
