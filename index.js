@@ -1,18 +1,20 @@
-require('dotenv').config()
+import express from 'express';
+import {carts} from './data.js';
 
-const express = require('express');
 const app = express();
+const port = 3000 || process.env.PORT
+   
 
-const port = process.env.PORT
 
 app.get('/', (req,res) => {
-    res.send('Hello Alfaiz')
+    res.send(carts)
 })
 
+
 app.get('/follow', (req,res) => {
-     res.send('Alfaiz Chadiyata')
+     res.send("Alfaiz chadiyata")
 })
 
 app.listen(port , () =>{
-    console.log(`SERVER STARTED ON PORT NO ${port}`)
+    console.log(`SERVER STARTED ON PORT NO ${port}`);
 })
